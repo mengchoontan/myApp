@@ -1,5 +1,15 @@
 <ion-view view-title="Browse">
-  <ion-content>
-    <h1>Browse</h1>
+
+  <ion-content ng-controller="BrowseCtrl">
+      <div class="list">
+       <div ng-repeat="file in files">
+            <a class="item item-icon-left" href="#" ng-click="getContents(file.nativeURL)">
+                <i ng-show="file.isDirectory" class="icon ion-folder"></i>
+                <i ng-show="file.isFile" class="icon ion-document"></i>
+                {{file.name}}
+            </a>
+        </div>
+      </div>
   </ion-content>
+
 </ion-view>

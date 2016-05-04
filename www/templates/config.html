@@ -1,6 +1,16 @@
 <ion-view view-title="Configure">
   <ion-content ng-controller="ConfigCtrl">
     <h1>Config</h1>
-       <button class="button" ng-click="upload()">Upload From Assets</button>
+      <button class="button" ng-click="upload()">Download From Assets</button>
+      <h2>Browse Files</h2>
+      <div class="list">
+       <div ng-repeat="file in files">
+            <a class="item item-icon-left" href="#" ng-click="getContents(file.nativeURL)">
+                <i ng-show="file.isDirectory" class="icon ion-folder"></i>
+                <i ng-show="file.isFile" class="icon ion-document"></i>
+                {{file.name}}
+            </a>
+        </div>
+      </div>
   </ion-content>
 </ion-view>

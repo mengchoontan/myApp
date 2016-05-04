@@ -1,0 +1,14 @@
+<ion-view view-title="File Choose">
+
+  <ion-content ng-controller="FileCtrl">
+     <h1>File Choose</h1>
+         <button class="button button-full button-positive" ng-click="filepathChooser()">
+                      Select File
+         </button>
+         {{uri}}
+         <button class="button button-block button-positive" ng-click="save(uri, 'lastname', 'email')">
+                Save
+         </button>
+  </ion-content>
+
+</ion-view>
