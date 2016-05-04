@@ -1,0 +1,11 @@
+<ion-view title="Couchbase with PouchDB">
+   <h1>Data</h1>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="item in items"> 
+                {{item.firstname}} {{item.lastname}}
+                <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(key, value._rev)"></ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

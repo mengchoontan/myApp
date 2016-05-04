@@ -1,0 +1,23 @@
+<ion-view title="Couchbase with PouchDB">
+    <ion-nav-buttons side="left">
+        <button class="left button button-icon icon button-clear" ng-click="back()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" ng-model="inputForm.SN" placeholder="Serial Number">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="inputForm.Name" placeholder="Name">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="inputForm.Gender" placeholder="Gender">
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="save(inputForm.SN, inputForm.Name, inputForm.Gender)">
+                Save
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

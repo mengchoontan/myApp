@@ -1,0 +1,20 @@
+<ion-view view-title="Todo">
+  <ion-content>
+
+<ion-pane ng-controller="TodoCtrl">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+        <button class="right button button-icon icon ion-plus" ng-click="create()"></button>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="todo in todos">
+                {{todo.title}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-pane>
+
+
+  </ion-content>
+</ion-view>

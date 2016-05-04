@@ -1,0 +1,15 @@
+<ion-view title="Data Management">
+  <ion-nav-buttons side="right">
+      <button class="left button button-icon icon ion-plus" ui-sref="app.item"></button>
+  </ion-nav-buttons>
+  <ion-content>
+      <ion-list show-delete="false" can-swipe="true">
+          <ion-item ng-repeat="(key, value) in items" ui-sref="app.item({documentId: key, documentRevision: value._rev})">
+              {{value.SN}} {{value.Name}} {{value.Gender}} {{value.CMT}} {{value}}
+              <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(key, value._rev)"></ion-option-button>
+          </ion-item>
+      </ion-list>
+  <h2>Drop Database</h2>
+  <button class="button button-assertive icon ion-trash-a" ng-click="destroy()">
+  </ion-content>
+</ion-view>
