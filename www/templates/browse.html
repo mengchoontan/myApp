@@ -1,5 +1,29 @@
-<ion-view view-title="Browse">
-  <ion-content>
-    <h1>Browse</h1>
+<ion-view view-title="Browse to CSV">
+
+ <ion-content ng-controller="ImportCtrl">
+
+ <div class="block left">
+    <ng-csv-import 
+      class="import"
+      content="csv.content"
+      header="csv.header" 
+      header-visible="csv.headerVisible" 
+      separator="csv.separator"
+      separator-visible="csv.separatorVisible"
+      result="csv.result"
+      encoding="csv.encoding"
+      encoding-visible="csv.encodingVisible"></ng-csv-import>
+  </div>
+
+<div class="block row"  ng-if="csv.result">
+  CSV
+  <div class="content" hljs source="toPrettyJSON(csv.result, 2)"></div>
+</div>
+
+<div class="block row">
+
+<input type="file" id="files" name="files[]"/>
+   </div>
   </ion-content>
+
 </ion-view>
